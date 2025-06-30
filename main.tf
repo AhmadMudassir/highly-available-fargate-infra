@@ -211,7 +211,7 @@ resource "aws_ecs_task_definition" "ahmad-taskdef-terra" {
   cpu = 1024
   memory = 2048
   
-  execution_role_arn = "arn:aws:iam::504649076991:role/ecsTaskExecutionRole"
+  execution_role_arn = "arn:aws:iam::<aws_account_id>:role/ecsTaskExecutionRole"
   container_definitions = jsonencode([
     {
         name = "nginx-terra"
