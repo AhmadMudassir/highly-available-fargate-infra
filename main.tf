@@ -215,7 +215,7 @@ resource "aws_ecs_task_definition" "ahmad-taskdef-terra" {
   container_definitions = jsonencode([
     {
         name = "nginx-terra"
-        image = "504649076991.dkr.ecr.us-east-2.amazonaws.com/ahmad-repo-terra:v1"
+        image = "<aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo-name>:v1"
         cpu = 1024
         memory = 2048
         essential = true
@@ -290,9 +290,9 @@ resource "null_resource" "ecr-docker-push-ahmad" {
   provisioner "local-exec" {
     command = <<EOF
     docker build -t ahmad-nginx-html ./nginx-dockerfile
-    aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 504649076991.dkr.ecr.us-east-2.amazonaws.com
-    docker tag ahmad-nginx-html:latest 504649076991.dkr.ecr.us-east-2.amazonaws.com/ahmad-repo-terra:v1
-    docker push 504649076991.dkr.ecr.us-east-2.amazonaws.com/ahmad-repo-terra:v1
+    aws ecr get-login-password --region <repo-name> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
+    docker tag ahmad-nginx-html:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com<repo-name>:v1
+    docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repo-name>:v1
     EOF
   }
 }
