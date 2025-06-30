@@ -70,12 +70,12 @@ The infrastructure includes:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-org>/<your-repo>.git
-   cd <your-repo>
+   git clone https://github.com/AhmadMudassir/highly-available-fargate-infra.git
+   cd highly-available-fargate-infra
    ```
 
 2. **Update Variables**
-   - Open `variables.tf` or your `.tfvars` file.
+   - Open `variables.tf` file.
    - Set your AWS region, CIDR blocks, owner tag, etc.
    - **IMPORTANT:** Replace any placeholder values in `main.tf`:
      - AWS Account ID
@@ -113,7 +113,7 @@ The infrastructure includes:
    - Deploy the ECS Service behind the ALB
 
 6. **Verify the Deployment**
-   - Get the ALB DNS name from the AWS console or Terraform output.
+   - Get the ALB DNS name from the AWS console.
    - Visit:
      ```
      http://<alb-dns-name>
@@ -145,7 +145,3 @@ terraform destroy
 - The Docker image is built and pushed automatically via the `null_resource` using local-exec. Ensure Docker is installed and running locally.
 
 ---
-
-## 📜 License
-
-This project is licensed under the MIT License.
