@@ -40,12 +40,18 @@ The infrastructure includes:
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
 ```bash
 .
 ├── main.tf               # Core infrastructure definitions
 ├── variables.tf          # Input variables
+├── nginx-dockerfile/     # Custom NGINX image context
+│   ├── Dockerfile
+│   └── index.html
 └── README.md             # Project documentation
 ```
+
 
 ---
 
