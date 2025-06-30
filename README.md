@@ -40,8 +40,6 @@ The infrastructure includes:
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 ```bash
 .
 ├── main.tf               # Core infrastructure definitions
