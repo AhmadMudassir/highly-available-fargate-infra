@@ -1,6 +1,6 @@
-# 🚀 Highly Available Nginx Deployment on AWS ECS Fargate with ALB and EFS using Terraform
+# 🚀 Highly Available Custom Image Deployment on AWS ECS Fargate with ALB and EFS using Terraform
 
-This project demonstrates how to deploy an **Nginx container** on **AWS ECS Fargate** behind an **Application Load Balancer (ALB)** with persistent storage using **EFS**. All infrastructure is defined and provisioned using **Terraform**.
+This project demonstrates how to deploy an **Custom Image container** on **AWS ECS Fargate** behind an **Application Load Balancer (ALB)** with persistent storage using **EFS**. All infrastructure is defined and provisioned using **Terraform**.
 
 ---
 
